@@ -1,14 +1,13 @@
 import { FiPlus, FiSearch } from "react-icons/fi";
-import { Container, Brand, Menu, Search, Content, NewNote } from "./style"
-import { Header } from "../../Components/Header";
-import { Input } from "../../Components/Input";
-import { Section } from "../../Components/Section";
-import { ButtonText } from "../../Components/ButtonText";
-import { Note } from "../../Components/Note";
+import { Container, Brand, Menu, Search, Content, NewNote } from "./style.js"
+import { Header } from "../../Components/Header/index.jsx";
+import { Input } from "../../Components/Input/index.jsx";
+import { Section } from "../../Components/Section/index.jsx";
+import { ButtonText } from "../../Components/ButtonText/index.jsx";
+import { Note } from "../../Components/Note/index.jsx";
 import { IoExitOutline } from "react-icons/io5";
 import { useAuth } from "../../Hooks/auth.jsx";
 import { useState } from "react";
-import { Button } from "../../Components/Boxe/index.jsx";
 
 
 
@@ -46,9 +45,15 @@ export function Home() {
             </Search> */}
 
             <Content>
-                <Button title="Bloco 1" />
-                <Button title="Bloco 2" />
-                <Button title="Bloco 3" />
+                <div>
+                    <label class="switch">
+                        <input onChange={(e) => {
+                            setChecked(e.target.checked)
+                            console.log(checked)
+                        } } type="checkbox" />
+                        <span class="slider round"></span>
+                    </label>
+                </div>
             </Content>
 
             <NewNote onClick={signOut}>
