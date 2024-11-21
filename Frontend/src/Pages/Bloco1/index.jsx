@@ -1,7 +1,7 @@
 import { Container, Brand, Menu, Content, NewNote } from "./style.js"
 import { Header } from "../../Components/Header/index.jsx";
 import { ButtonText } from "../../Components/ButtonText/index.jsx";
-import { Rooms } from "../../Components/Rooms/index.jsx";
+import { Floor } from "../../Components/Floor/index.jsx";
 import { IoExitOutline } from "react-icons/io5";
 import { useAuth } from "../../Hooks/auth.jsx";
 import { Card } from "../../Components/Card/index.jsx";
@@ -38,7 +38,7 @@ export function Bloco1() {
 
             <Content>
                 <h1>1º Andar</h1>
-                <Rooms />
+                <Floor />
 
                 <hr />
                 <div>
